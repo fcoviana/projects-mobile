@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.CheckBox;
 import android.widget.EditText;
+import android.widget.RadioButton;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
@@ -22,6 +23,8 @@ public class MainActivity extends AppCompatActivity {
         ckbCell = findViewById(R.id.ckb_cell);
         ckbSms = findViewById(R.id.ckb_sms);
         txtResult = findViewById(R.id.txt_result);
+        rdgMale = findViewById(R.id.rdg_male);
+        rdgFemale = findViewById(R.id.rdg_female);
 
     }
 
@@ -31,6 +34,8 @@ public class MainActivity extends AppCompatActivity {
     private CheckBox ckbCell;
     private CheckBox ckbSms;
     private TextView txtResult;
+    private RadioButton rdgMale;
+    private RadioButton rdgFemale;
 
     public void sendMesage(View v) {
 
@@ -46,6 +51,11 @@ public class MainActivity extends AppCompatActivity {
         if(ckbName.isChecked())
             mesage += ckbName.getText().toString() + "\n";
 
+        if(rdgMale.isChecked())
+            mesage += "Sexo: " + rdgMale.getText().toString() + "\n";
+        else if(rdgFemale.isChecked())
+            mesage += "Sexo: " + rdgFemale.getText().toString() + "\n";
+
         AlertDialog.Builder alert = new AlertDialog.Builder(MainActivity.this);
         alert.setMessage(mesage);
         alert.setNeutralButton("OK", null);
@@ -60,5 +70,8 @@ public class MainActivity extends AppCompatActivity {
         ckbName.setChecked(false);
         ckbCell.setChecked(false);
         ckbSms.setChecked(false);
+        rdgMale.setChecked(false);
+        rdgFemale.setChecked(false);
+        txtResult.setText("Resultado");
     }
 }

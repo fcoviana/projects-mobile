@@ -8,109 +8,157 @@
 
     <Button
         android:id="@+id/btn_clean"
-        android:layout_width="360dp"
-        android:layout_height="48dp"
-        android:layout_marginTop="128dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginEnd="25dp"
+        android:layout_marginBottom="27dp"
         android:onClick="cleanInput"
         android:text="Limpar"
+        app:layout_constraintBottom_toTopOf="@+id/btn_add"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.49"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/ckb_cell" />
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup2" />
 
     <Button
         android:id="@+id/btn_add"
-        android:layout_width="360dp"
-        android:layout_height="48dp"
-        android:layout_marginTop="28dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginEnd="25dp"
+        android:layout_marginBottom="69dp"
         android:onClick="sendMesage"
         android:text="Cadastrar"
+        app:layout_constraintBottom_toTopOf="@+id/txt_result"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.49"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btn_clean" />
 
     <EditText
         android:id="@+id/edt_name"
-        android:layout_width="378dp"
+        android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="32dp"
-        android:layout_marginBottom="242dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="24dp"
         android:ems="10"
         android:hint="Nome"
         android:inputType="textPersonName"
-        app:layout_constraintBottom_toTopOf="@+id/textView2"
+        app:layout_constraintBottom_toTopOf="@+id/edt_cell"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/edt_cell"
-        android:layout_width="373dp"
-        android:layout_height="49dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="26dp"
         android:ems="10"
         android:hint="Telefone"
         android:inputType="phone"
+        app:layout_constraintBottom_toTopOf="@+id/ckb_name"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/edt_name" />
 
     <CheckBox
         android:id="@+id/ckb_name"
-        android:layout_width="376dp"
-        android:layout_height="34dp"
-        android:layout_marginStart="15dp"
-        android:layout_marginTop="167dp"
-        android:layout_marginEnd="15dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="10dp"
         android:text="Nome"
         app:layout_constraintBottom_toTopOf="@+id/ckb_sms"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.173"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edt_cell"
         tools:ignore="MissingConstraints" />
 
     <CheckBox
         android:id="@+id/ckb_cell"
-        android:layout_width="377dp"
-        android:layout_height="38dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
-        android:layout_marginBottom="420dp"
+        android:layout_marginBottom="18dp"
         android:text="Telefone"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/textView"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.375"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/ckb_sms"
         tools:ignore="MissingConstraints" />
 
     <CheckBox
         android:id="@+id/ckb_sms"
-        android:layout_width="373dp"
-        android:layout_height="34dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
+        android:layout_marginBottom="10dp"
         android:text="SMS"
         app:layout_constraintBottom_toTopOf="@+id/ckb_cell"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/ckb_name"
         tools:ignore="MissingConstraints" />
+
 
     <TextView
         android:id="@+id/txt_result"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="17dp"
-        android:layout_marginBottom="54dp"
+        android:layout_marginStart="45dp"
+        android:layout_marginBottom="40dp"
         android:text="Resultado: "
-        app:layout_constraintBottom_toTopOf="@+id/btn_clean"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ckb_cell"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintTop_toBottomOf="@+id/btn_add" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="45dp"
+        android:layout_marginEnd="44dp"
+        android:layout_marginBottom="71dp"
+        app:layout_constraintBottom_toTopOf="@+id/btn_clean"
+        app:layout_constraintEnd_toEndOf="@+id/ckb_sms"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        tools:ignore="MissingConstraints">
+
+        <RadioButton
+            android:id="@+id/rdg_male"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Masculino"
+            tools:layout_editor_absoluteX="17dp"
+            tools:layout_editor_absoluteY="336dp" />
+
+        <RadioButton
+            android:id="@+id/rdg_female"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Feminino"
+            tools:layout_editor_absoluteX="36dp"
+            tools:layout_editor_absoluteY="368dp" />
+
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:layout_marginBottom="6dp"
+        android:text="Sexo"
+        app:layout_constraintBottom_toTopOf="@+id/radioGroup2"
+        app:layout_constraintStart_toStartOf="@+id/ckb_cell"
+        app:layout_constraintTop_toBottomOf="@+id/ckb_cell" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
