@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Switch;
 import android.widget.TextView;
+import android.widget.Toast;
 import android.widget.ToggleButton;
 
 public class MainActivity extends AppCompatActivity {
@@ -33,5 +34,11 @@ public class MainActivity extends AppCompatActivity {
             txtResult.setText("Switch desativado e ToogleButton ativado");
         else if(!swtStatus.isChecked() && !tggBtnStatus.isChecked())
             txtResult.setText("Switch e ToogleButton desativados");
+    }
+
+    public void showToast(View v) {
+        Toast.makeText(
+          getApplicationContext(), "Mensagem teste",
+          Toast.LENGTH_SHORT).show();
     }
 }
