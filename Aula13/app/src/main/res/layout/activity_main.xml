@@ -50,4 +50,11 @@
         android:layout_height="wrap_content"
         android:onClick="showToast"
         android:text="Toast" />
+
+    <Button
+        android:id="@+id/btn_alert"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="showAlet"
+        android:text="Alerta" />
 </LinearLayout>

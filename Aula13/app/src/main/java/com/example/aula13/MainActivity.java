@@ -1,7 +1,9 @@
 package com.example.aula13;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.DialogInterface;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Switch;
@@ -40,5 +42,34 @@ public class MainActivity extends AppCompatActivity {
         Toast.makeText(
           getApplicationContext(), "Mensagem teste",
           Toast.LENGTH_SHORT).show();
+    }
+
+    public void showAlet(View v) {
+        AlertDialog.Builder alert = new AlertDialog.Builder(this);
+        alert.setIcon(android.R.drawable.ic_delete);
+        alert.setTitle("Titulo do alerta");
+        alert.setMessage("Aqui você pode colocar a mensagem do alerta...");
+        alert.setCancelable(false);
+
+        alert.setPositiveButton("Ok", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+                Toast.makeText(
+                        getApplicationContext(), "Ciclou OK",
+                        Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        alert.setNegativeButton("Cancelar", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+                Toast.makeText(
+                        getApplicationContext(), "Ciclou Cancelar",
+                        Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        alert.create();
+        alert.show();
     }
 }
