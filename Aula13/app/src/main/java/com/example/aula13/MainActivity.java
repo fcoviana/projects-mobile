@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.DialogInterface;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ProgressBar;
 import android.widget.Switch;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -21,11 +22,16 @@ public class MainActivity extends AppCompatActivity {
         swtStatus = findViewById(R.id.swt_status);
         tggBtnStatus = findViewById(R.id.tggBtn_status);
         txtResult = findViewById(R.id.txt_result);
+        pgbHorizontal = findViewById(R.id.pgb_horizontal);
+        pgbCircle = findViewById(R.id.pgb_circle);
     }
 
     private Switch swtStatus;
     private ToggleButton tggBtnStatus;
     private TextView txtResult;
+    private ProgressBar pgbHorizontal;
+    private ProgressBar pgbCircle;
+    private int advance = 0;
 
     public void send(View v) {
         if(swtStatus.isChecked() && tggBtnStatus.isChecked())
@@ -71,5 +77,14 @@ public class MainActivity extends AppCompatActivity {
 
         alert.create();
         alert.show();
+    }
+
+    public void advanceProgressBar(View v) {
+        this.advance += 1;
+        pgbHorizontal.setProgress(this.advance);
+        pgbCircle.setVisibility(View.VISIBLE);
+
+        if(this.advance >= 10)
+            pgbCircle.setVisibility(View.GONE);
     }
 }
