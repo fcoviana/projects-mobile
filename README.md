@@ -1,7 +1,7 @@
-<div align="center"><a href="https://www.android.com/intl/pt-BR_br/"><img width="150" height="150" src="https://pt.wikipedia.org/wiki/APK#/media/Ficheiro:APK_format_icon.png"></a>
+<div align="center"><a href="https://www.android.com/intl/pt-BR_br/"><img width="150" height="150" src="https://logodownload.org/wp-content/uploads/2015/05/android-logo-0-1.png"></a>
 
 ##  Programação Para Aplicativos Móveis
-### Centro Universitário Católica de Quixadá ()
+### Centro Universitário Católica de Quixadá(http://unicatolicaquixada.edu.br/)
 
 </div>
 
