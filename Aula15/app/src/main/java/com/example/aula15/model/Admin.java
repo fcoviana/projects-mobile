@@ -1,4 +1,7 @@
 package com.example.aula15.model;
 
-public class Admin {
+import java.io.Serializable;
+
+public class Admin implements Serializable {
+    private String username
 }
